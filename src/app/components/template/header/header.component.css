@@ -1,0 +1,25 @@
+.header{
+   display: flex;
+   align-items: center; 
+}
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header .logo {
+    max-height: 31px;
+    margin-right: 5px;
+}
+
+span h1{
+    color:#4876FF;
+    font-size: 1em;
+}
+.config{
+    position: absolute;
+    right: 8px;
+}
+.config a {
+    padding: 5px;
+}
