@@ -1,0 +1,28 @@
+mat-card{
+    margin: 10px;
+}
+.card{
+    width: 160px;
+    float: left;
+}
+.cardTable{
+    clear: both;
+    height: 400px;
+    overflow: scroll;
+}
+button{
+    background-color: #1cc88a;
+    color: white;
+    margin: 10px;
+}
+h1 {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+table{
+    width: 100%;
+}
+mat-card > p{
+    font-size: 16px;
+}

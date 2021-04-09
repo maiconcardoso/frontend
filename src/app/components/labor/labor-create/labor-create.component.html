@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title class="card-title">Novo Serviço</mat-card-title>
+    <form>
+        <mat-form-field>
+            <mat-label>Nome do Serviço</mat-label>
+            <input matInput placeholder="Ex. Embuchar Biela" >
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Valor</mat-label>
+            <input matInput placeholder="Ex. 25.00">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Marca do Carro</mat-label>
+            <input matInput placeholder="Ex. Wolksvagem">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Modelo do Motor</mat-label>
+            <input matInput placeholder="Ex. AP 2.0">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button class="btn-save" >
+        Salvar
+    </button>
+    <button mat-raised-button class="btn-cancel" (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

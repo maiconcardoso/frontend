@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title class="card-title">Nova Peça</mat-card-title>
+    <form>
+        <mat-form-field>
+            <mat-label>Nome da Peça</mat-label>
+            <input matInput placeholder="Ex. Bronzina de Biela">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Código</mat-label>
+            <input matInput placeholder="Ex. 0457896">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Quantidade</mat-label>
+            <input matInput placeholder="Ex. 10">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Valor</mat-label>
+            <input matInput placeholder="Ex. 120.00">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Marca</mat-label>
+            <input matInput placeholder="Ex. METAL LEVE">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Modelo Motor</mat-label>
+            <input matInput placeholder="Ex. AP 2.0">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button class="btn-save" >
+        Salvar
+    </button>
+    <button mat-raised-button class="btn-cancel" (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

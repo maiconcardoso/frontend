@@ -1,21 +1,18 @@
 <mat-toolbar class="header">
     <span>
-        <a>
+        <a routerLink="/">
             <img class="logo" src="assets/img/logo.png" alt="logo">
         </a>
     </span>
     <span>
-        <a>
+        <a routerLink="/">
             <h1>AUTOSOFT</h1>
         </a>
     </span>
-    <mat-expansion-panel class="config">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                Usuario Logado
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <a mat-list-item routerLink="register">Registrar novo usuario</a>
-        <a mat-list-item routerLink="logout">Sair do sistema</a>
-    </mat-expansion-panel>
+    <button class="config" mat-raised-button [matMenuTriggerFor]="menu">Usuario Logado</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/register">Registrar novo usuario</button>
+        <button mat-menu-item (click)="openDialog()">Sair do sistema</button>
+    </mat-menu>
+
 </mat-toolbar>

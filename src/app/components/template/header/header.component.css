@@ -1,6 +1,6 @@
 .header{
    display: flex;
-   align-items: center; 
+   align-items: center;
 }
 .header a {
     display: flex;
@@ -17,9 +17,8 @@ span h1{
     font-size: 1em;
 }
 .config{
-    position: absolute;
-    right: 8px;
-}
-.config a {
-    padding: 5px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-weight: 200;
 }

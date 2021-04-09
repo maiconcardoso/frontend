@@ -2,18 +2,33 @@
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="/client">
+                <i class="material-icons">
+                    perm_identity
+                </i>
                 Cliente
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="/provider">
+                <i class="material-icons">
+                    account_box
+                </i>
                 Fornecedor
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="/labor">
+                <i class="material-icons">
+                    build
+                </i>
                 Serviços
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="/product">
+                <i class="material-icons">
+                    lightbulb
+                </i>
                 Peças
             </a>
-            <a mat-list-item>
+            <a mat-list-item routerLink="/os">
+                <i class="material-icons">
+                    ballot
+                </i>
                 Ordem De Serviço
             </a>
         </mat-nav-list>

@@ -1,0 +1,30 @@
+<mat-card>
+    <form>
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]= "user.name" name = "name"
+            matInput placeholder="Ex. Jose Carlos">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label> Login </mat-label>
+            <input [(ngModel)]= "user.nick" name = "nick"
+            matInput placeholder="Ex. josecarlos">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input [(ngModel)]= "user.email" name = "email"
+            matInput placeholder="Ex. josecarlos@email.com">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label> Senha </mat-label>
+            <input [(ngModel)]= "user.password" name = "password"
+            matInput placeholder="Senha">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput placeholder="Confirme a Senha">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createUser()">
+        Salvar
+    </button>
+</mat-card>

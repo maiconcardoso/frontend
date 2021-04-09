@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title class="card-title">Novo Cliente</mat-card-title>
+    <mat-card-title class="card-title">Novo Fornecedor</mat-card-title>
     <form>
         <mat-form-field class="form-line">
             <mat-label>Nome</mat-label>
@@ -14,6 +14,10 @@
             <input matInput placeholder="Ex. (44) 3055-2222">
         </mat-form-field>
         <mat-form-field>
+            <mat-label>CPF</mat-label>
+            <input matInput placeholder="Ex. 085.636.972-10">
+        </mat-form-field>
+        <mat-form-field>
             <mat-label>Email</mat-label>
             <input matInput placeholder="Ex. josedasilva@gmail.com">
         </mat-form-field>
@@ -25,8 +29,12 @@
             <mat-label>Endereço</mat-label>
             <input matInput placeholder="Ex. Rua Jóse Lupiom, 337 - Jardim Asa Branca">
         </mat-form-field>
+        <mat-form-field>
+            <mat-label>CEP</mat-label>
+            <input matInput placeholder="Ex. 850261206">
+        </mat-form-field>
     </form>
-    <button mat-raised-button class="btn-save" (click)="createClient()">
+    <button mat-raised-button class="btn-save" >
         Salvar
     </button>
     <button mat-raised-button class="btn-cancel" (click)="cancel()">
