@@ -1,30 +1,21 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { ClientReadDataSource, ClientReadItem } from './client-read-datasource';
+import { ClientService } from './../client.service';
+import { Client } from './../client.model';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-client-read',
   templateUrl: './client-read.component.html',
   styleUrls: ['./client-read.component.css']
 })
-export class ClientReadComponent implements AfterViewInit {
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<ClientReadItem>;
-  dataSource: ClientReadDataSource;
+export class ClientReadComponent implements OnInit {
+  clients: Client[]
+  displayedColumns = ['name', 'whatsapp', 'fone', 'cpf', 'email', 'city', 'address', 'action'];
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  constructor(private clientservice: ClientService) { this.clients = [] }
 
-  constructor() {
-    this.dataSource = new ClientReadDataSource();
-  }
-
-  ngAfterViewInit(): void {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+  ngOnInit(): void {
+    this.clientservice.read().subscribe(clients=> {
+      this.clients = clients
+    })
   }
 }

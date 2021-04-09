@@ -25,13 +25,17 @@ export class ClientCreateComponent implements OnInit {
     cep: null
   };
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private clientservice: ClientService) { }
 
   ngOnInit(): void {
   }
 
   createClient(): void {
-     this.router.navigate(['/client'])
+    this.clientservice.create(this.client).subscribe(() => {
+      this.clientservice.showMessage('Cliente salvo com sucesso!')
+      this.router.navigate(['/client'])
+    })
+     
   }
   cancel(): void {
     this.router.navigate(['/client'])
