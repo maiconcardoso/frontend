@@ -1,3 +1,4 @@
+import { MatDialog } from '@angular/material/dialog';
 import { ClientService } from './../client.service';
 import { Client } from './../client.model';
 import { Component, OnInit } from '@angular/core';
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientReadComponent implements OnInit {
   clients: Client[]
-  displayedColumns = ['name', 'whatsapp', 'fone', 'cpf', 'email', 'city', 'address', 'action'];
+  displayedColumns = ['id' ,'name', 'whatsapp', 'fone', 'cpf', 'email', 'city', 'address', 'action'];
 
   constructor(private clientservice: ClientService) { this.clients = [] }
 

@@ -31,12 +31,16 @@ export class ClientCreateComponent implements OnInit {
   }
 
   createClient(): void {
-    this.clientservice.create(this.client).subscribe(() => {
-      this.clientservice.showMessage('Cliente salvo com sucesso!')
-      this.router.navigate(['/client'])
-    })
-     
+    if (this.client.name != '') {
+      this.clientservice.create(this.client).subscribe(() => {
+        this.clientservice.showMessage('Cliente salvo com sucesso!')
+        this.router.navigate(['/client'])
+      })  
+    } else {
+      this.clientservice.showMessage('Nome do cliente deve ser preenchido')
+    }
   }
+  
   cancel(): void {
     this.router.navigate(['/client'])
   }

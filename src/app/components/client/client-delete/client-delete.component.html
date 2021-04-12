@@ -1,0 +1,66 @@
+<mat-card>
+    <mat-card-title class="card-title">Excluir Cliente</mat-card-title>
+    <form>
+        <mat-form-field class="form-line">
+            <mat-label>Nome</mat-label>
+            <input matInput 
+            [(ngModel)]="client.name" name ="name"
+            placeholder="Ex. Jose da Silva">
+        </mat-form-field>
+
+        <mat-form-field class="form-line">
+            <mat-label>Whatsapp</mat-label>
+            <input matInput 
+            [(ngModel)]="client.whatsapp" name ="whatsapp"
+            placeholder="Ex. (44) 99225-8866">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Telefone</mat-label>
+            <input matInput 
+            [(ngModel)]="client.fone" name ="fone"
+            placeholder="Ex. (44) 3055-2222">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CPF</mat-label>
+            <input matInput 
+            [(ngModel)]="client.cpf" name ="cpf"
+            placeholder="Ex. 07546589625">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput 
+            [(ngModel)]="client.email" name ="email"
+            placeholder="Ex. josedasilva@gmail.com">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Cidade</mat-label>
+            <input matInput 
+            [(ngModel)]="client.city" name ="city"
+            placeholder="Ex. Paranavaí - PR">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Endereço</mat-label>
+            <input matInput 
+            [(ngModel)]="client.address" name ="address"
+            placeholder="Ex. Rua Jóse Lupiom, 337 - Jardim Asa Branca">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CEP</mat-label>
+            <input matInput 
+            [(ngModel)]="client.cep" name ="cep"
+            placeholder="Ex. 87075105">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button color="warn" (click)="deleteClient()">
+        Excluir
+    </button>
+    <button mat-raised-button class="btn-cancel" (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
