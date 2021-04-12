@@ -1,64 +1,66 @@
 <mat-card>
-    <mat-card-title class="card-title">Novo Fornecedor</mat-card-title>
+    <mat-card-title class="card-title">Atualizar Fornecedor</mat-card-title>
     <form>
         <mat-form-field class="form-line">
             <mat-label>Nome</mat-label>
             <input matInput 
-            [(ngModel)]="provider.name" name="name" >
+            [(ngModel)]="provider.name" name ="name"
+            placeholder="Ex. Jose da Silva">
         </mat-form-field>
 
         <mat-form-field class="form-line">
             <mat-label>Whatsapp</mat-label>
             <input matInput 
-            [(ngModel)]="provider.whatsapp" name="whatsapp">
+            [(ngModel)]="provider.whatsapp" name ="whatsapp"
+            placeholder="Ex. (44) 99225-8866">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Telefone</mat-label>
             <input matInput 
-            [(ngModel)]="provider.fone" name="fone" 
+            [(ngModel)]="provider.fone" name ="fone"
             placeholder="Ex. (44) 3055-2222">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>CNPJ</mat-label>
             <input matInput 
-            [(ngModel)]="provider.cnpj" name="cnpj" 
-            placeholder="Ex. 085.636.972-10">
+            [(ngModel)]="provider.cnpj" name ="cnpj"
+            placeholder="Ex. 07546589625">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Email</mat-label>
             <input matInput 
-            [(ngModel)]="provider.email" name="email" 
+            [(ngModel)]="provider.email" name ="email"
             placeholder="Ex. josedasilva@gmail.com">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Cidade</mat-label>
             <input matInput 
-            [(ngModel)]="provider.city" name="city"  
+            [(ngModel)]="provider.city" name ="city"
             placeholder="Ex. Paranavaí - PR">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Endereço</mat-label>
             <input matInput 
-            [(ngModel)]="provider.address" name="address" 
+            [(ngModel)]="provider.address" name ="address"
             placeholder="Ex. Rua Jóse Lupiom, 337 - Jardim Asa Branca">
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>CEP</mat-label>
             <input matInput 
-            [(ngModel)]="provider.cep" name="cep" 
-            placeholder="Ex. 850261206">
+            [(ngModel)]="provider.cep" name ="cep"
+            placeholder="Ex. 87075105">
         </mat-form-field>
     </form>
-    <button (click)="createProvider()" mat-raised-button class="btn-save" >
-        Salvar
+    <button mat-raised-button class="btn-save" (click)="updateProvider()">
+        Atualizar
     </button>
-    <button (click)="cancel()" mat-raised-button class="btn-cancel" >
+    <button mat-raised-button class="btn-cancel" (click)="cancel()">
         Cancelar
     </button>
 </mat-card>
