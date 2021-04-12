@@ -38,6 +38,24 @@ import { LoginComponent } from './views/login/login.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { MatSnackBarModule } from  '@angular/material/snack-bar';
 import { HttpClientModule } from "@angular/common/http";
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
+import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { LaborReadComponent } from './components/labor/labor-read/labor-read.component';
+import { LaborUpdateComponent } from './components/labor/labor-update/labor-update.component';
+import { LaborDeleteComponent } from './components/labor/labor-delete/labor-delete.component';
+import { OsReadComponent } from './components/os/os-read/os-read.component';
+import { OsUpdateComponent } from './components/os/os-update/os-update.component';
+import { OsDeleteComponent } from './components/os/os-delete/os-delete.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ProviderReadComponent } from './components/provider/provider-read/provider-read.component';
+import { ProviderUpdateComponent } from './components/provider/provider-update/provider-update.component';
+import { ProviderDeleteComponent } from './components/provider/provider-delete/provider-delete.component';
+import { UserReadComponent } from './components/user/user-read/user-read.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
+
  
 @NgModule({
   declarations: [
@@ -60,6 +78,24 @@ import { HttpClientModule } from "@angular/common/http";
     OsCrudComponent,
     LoginComponent,
     UserCreateComponent,
+    ClientUpdateComponent,
+    ClientDeleteComponent,
+    LaborReadComponent,
+    LaborUpdateComponent,
+    LaborDeleteComponent,
+    OsReadComponent,
+    OsUpdateComponent,
+    OsDeleteComponent,
+    ProductReadComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent,
+    ProviderReadComponent,
+    ProviderUpdateComponent,
+    ProviderDeleteComponent,
+    UserReadComponent,
+    UserUpdateComponent,
+    UserDeleteComponent,
+    
   ],
   imports: [
     BrowserModule,

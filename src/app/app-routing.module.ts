@@ -1,3 +1,7 @@
+import { ProviderDeleteComponent } from './components/provider/provider-delete/provider-delete.component';
+import { ProviderUpdateComponent } from './components/provider/provider-update/provider-update.component';
+import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 import { LoginComponent } from './views/login/login.component';
 import { OsCreateComponent } from './components/os/os-create/os-create.component';
 import { OsCrudComponent } from './views/os-crud/os-crud.component';
@@ -9,7 +13,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ProviderCreateComponent } from './components/provider/provider-create/provider-create.component';
 import { ProviderCrudComponent } from './views/provider-crud/provider-crud.component';
 import { ClientCrudComponent } from './views/client-crud/client-crud.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
@@ -36,12 +40,28 @@ const routes: Routes = [
     component: ClientCreateComponent
   },
   {
+    path: 'client/update/:id',
+    component: ClientUpdateComponent 
+  },
+  {
+    path: 'client/delete/:id',
+    component: ClientDeleteComponent
+  },
+  {
     path: 'provider',
     component: ProviderCrudComponent
   },
   {
     path: 'provider/create',
     component: ProviderCreateComponent
+  },
+  {
+    path: 'provider/update/:id',
+    component: ProviderUpdateComponent
+  },
+  {
+    path: 'provider/delete/:id',
+    component: ProviderDeleteComponent
   },
   {
     path: 'product',

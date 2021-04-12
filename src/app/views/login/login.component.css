@@ -2,7 +2,7 @@ mat-card{
     text-align:center;
     margin:150px auto;
     width:400px;
-    box-shadow:3px 2px 2px 2px rgba(0,0,0,0.3);
+    background-color: aliceblue;
 }
 h1 {
     padding-bottom:10px;

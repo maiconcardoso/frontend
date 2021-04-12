@@ -20,4 +20,8 @@ export class SystemCloseComponent implements OnInit {
     this.dialogClose.closeAll()
   }
 
+  cancel(): void {
+    this.dialogClose.closeAll()
+  }
+
 }
