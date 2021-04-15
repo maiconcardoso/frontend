@@ -55,6 +55,7 @@ import { ProviderDeleteComponent } from './components/provider/provider-delete/p
 import { UserReadComponent } from './components/user/user-read/user-read.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
+import { UserCrudComponent } from './views/user-crud/user-crud.component';
 
  
 @NgModule({
@@ -95,6 +96,7 @@ import { UserDeleteComponent } from './components/user/user-delete/user-delete.c
     UserReadComponent,
     UserUpdateComponent,
     UserDeleteComponent,
+    UserCrudComponent,
     
   ],
   imports: [

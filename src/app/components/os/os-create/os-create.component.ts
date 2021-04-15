@@ -1,3 +1,5 @@
+import { ClientReadComponent } from './../../client/client-read/client-read.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 
 export interface PeriodicElement {
@@ -32,9 +34,13 @@ export class OsCreateComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  addClient(): void {
+    this.dialog.open(ClientReadComponent)
   }
 
 }

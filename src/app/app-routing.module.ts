@@ -1,3 +1,12 @@
+import { UserCrudComponent } from './views/user-crud/user-crud.component';
+import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import { OsDeleteComponent } from './components/os/os-delete/os-delete.component';
+import { OsUpdateComponent } from './components/os/os-update/os-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { LaborDeleteComponent } from './components/labor/labor-delete/labor-delete.component';
+import { LaborUpdateComponent } from './components/labor/labor-update/labor-update.component';
 import { ProviderDeleteComponent } from './components/provider/provider-delete/provider-delete.component';
 import { ProviderUpdateComponent } from './components/provider/provider-update/provider-update.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
@@ -29,7 +38,19 @@ const routes: Routes = [
   },
   {
     path: 'register',
+    component: UserCrudComponent
+  },
+  {
+    path: 'register/create',
     component: UserCreateComponent
+  },
+  {
+    path: 'register/update/:id',
+    component: UserUpdateComponent
+  },
+  {
+    path: 'register/delete/:id',
+    component: UserDeleteComponent
   },
   {
     path: "client",
@@ -64,14 +85,6 @@ const routes: Routes = [
     component: ProviderDeleteComponent
   },
   {
-    path: 'product',
-    component: ProductCrudComponent
-  },
-  {
-    path: 'product/create',
-    component: ProductCreateComponent
-  },
-  {
     path: 'labor',
     component: LaborCrudComponent
   },
@@ -80,12 +93,44 @@ const routes: Routes = [
     component: LaborCreateComponent
   },
   {
+    path: 'labor/update/:id',
+    component: LaborUpdateComponent
+  },
+  {
+    path: 'labor/delete/:id',
+    component: LaborDeleteComponent
+  },
+  {
+    path: 'product',
+    component: ProductCrudComponent
+  },
+  {
+    path: 'product/create',
+    component: ProductCreateComponent
+  },
+  {
+    path: 'product/update/:id',
+    component: ProductUpdateComponent
+  },
+  {
+    path: 'product/delete/:id',
+    component: ProductDeleteComponent
+  },
+  {
     path: 'os',
     component: OsCrudComponent
   },
   {
     path: 'os/create',
     component: OsCreateComponent
+  },
+  {
+    path: 'os/update/:id',
+    component: OsUpdateComponent
+  },
+  {
+    path: 'os/delete/:id',
+    component: OsDeleteComponent
   }
 
 ];
