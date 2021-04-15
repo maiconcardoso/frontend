@@ -1,0 +1,51 @@
+<div class="mat-elevation-z8">
+    <table mat-table class="full-width-table" matSort [dataSource]="labors">
+  
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="nameLabor">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome do Serviço</th>
+        <td mat-cell *matCellDef="let row">{{row.nameLabor}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Valor</th>
+        <td mat-cell *matCellDef="let row">{{row.price}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="brandCar">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Marca do Carro</th>
+        <td mat-cell *matCellDef="let row">{{row.brandCar}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="modelMotor">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Modelo do Motor</th>
+        <td mat-cell *matCellDef="let row">{{row.modelMotor}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <a routerLink="/labor/update/{{ row.id }}" class="edit">
+            <i class="material-icons">
+              edit
+            </i>
+          </a>
+          <a routerLink="/labor/delete/{{ row.id }}" class="delete">
+            <i class="material-icons">
+              delete
+            </i>
+          </a>
+        </td>
+  
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">  </mat-paginator>
+  </div>

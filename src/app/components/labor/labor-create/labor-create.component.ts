@@ -1,3 +1,5 @@
+import { LaborService } from './../labor.service';
+import { Labor } from './../labor.model';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaborCreateComponent implements OnInit {
 
-  constructor(private router: Router ) { }
+  labor: Labor = {
+    nameLabor: '',
+    //@ts-ignore
+    price: null,
+    brandCar: '',
+    modelMotor: ''
+
+  }
+
+  constructor(private router: Router, private laborservice: LaborService ) { }
 
   ngOnInit(): void {
+  }
+
+  createLabor(): void {
+    this.laborservice.create(this.labor).subscribe(() => {
+      this.laborservice.showMessage('Serviço criado com sucesso!')
+      this.router.navigate(['/labor'])
+    })
   }
 
   cancel(): void {
