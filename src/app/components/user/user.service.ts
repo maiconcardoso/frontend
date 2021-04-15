@@ -34,4 +34,13 @@ export class UserService {
     return this.http.get<User>(url)
   }
 
+  update(user: User): Observable<User> {
+    const url = `${this.baseUrl}/${user.id}`
+    return this.http.put<User>(url, user)
+  }
+
+  delete(user: User): Observable<User> {
+    const url = `${this.baseUrl}/${user.id}`
+    return this.http.delete<User>(url)
+  }
 }

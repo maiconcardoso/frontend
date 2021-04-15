@@ -30,4 +30,8 @@ export class UserCreateComponent implements OnInit {
     })
   }
 
+  cancel(): void {
+    this.router.navigate(['/register'])
+  }
+
 }

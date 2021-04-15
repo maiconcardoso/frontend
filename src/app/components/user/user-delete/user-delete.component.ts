@@ -1,20 +1,33 @@
+import { Router, ActivatedRoute } from '@angular/router';
+import { UserService } from './../user.service';
+import { User } from './../user.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-delete',
-  template: `
-    <p>
-      user-delete works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './user-delete.component.html',
+  styleUrls: ['./user-delete.component.css']
 })
 export class UserDeleteComponent implements OnInit {
 
-  constructor() { }
+  //@ts-ignore
+  user: User;
+
+  constructor(private userservice: UserService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+    //@ts-ignore
+    this.userservice.readById(id).subscribe(user => {this.user = user})
+  }
+
+  deleteUser(): void {
+    this.userservice.delete(this.user).subscribe(() => {this.userservice.showMessage('Usuario excluído com sucesso!')})
+    this.router.navigate(['/register'])
+  }
+
+  cancel(): void {
+    this.router.navigate(['/register'])
   }
 
 }

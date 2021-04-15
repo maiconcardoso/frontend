@@ -1,0 +1,19 @@
+.full-width-table {
+    width: 100%;
+}
+
+th{
+    font-size: 14px;
+}
+
+td {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.edit {
+    margin-right: 25px;
+}
+.delete > i {
+    color: #e35e6b;
+}
