@@ -56,6 +56,9 @@ import { UserReadComponent } from './components/user/user-read/user-read.compone
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
+import { OsReadClientComponent } from './components/os/os-create/os-read-client/os-read-client.component';
+import { OsReadLaborComponent } from './components/os/os-create/os-read-labor/os-read-labor.component';
+import { OsReadProductComponent } from './components/os/os-create/os-read-product/os-read-product.component';
 
  
 @NgModule({
@@ -97,6 +100,9 @@ import { UserCrudComponent } from './views/user-crud/user-crud.component';
     UserUpdateComponent,
     UserDeleteComponent,
     UserCrudComponent,
+    OsReadClientComponent,
+    OsReadLaborComponent,
+    OsReadProductComponent,
     
   ],
   imports: [
