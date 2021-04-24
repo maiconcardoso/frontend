@@ -1,0 +1,27 @@
+.full-width-table {
+    width: 100%;
+}
+
+th{
+    font-size: 14px;
+}
+
+td {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.add {
+    cursor:pointer;
+    margin-right: 25px;
+    color:#1cc88a;
+}
+.add:active {
+    color:red;
+}
+
+button{
+    margin: 10px;
+    background-color:#1cc88a ;
+    color:white;
+}
