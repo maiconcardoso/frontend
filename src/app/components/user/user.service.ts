@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  baseUrl = "http://localhost:3001/user"
+  baseUrl = "/api/users"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

@@ -24,10 +24,7 @@ export class OsReadClientComponent implements OnInit {
   }
 
   addClientOs(): void {
-    //@ts-ignore
-    document.getElementById("add")?.innerHTML = "done";
-    //@ts-ignore
-    document.getElementById("add")?.style.color = "#3f51b5";
+    
   }
 
   newClient(): void {
